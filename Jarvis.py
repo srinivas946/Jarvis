@@ -196,11 +196,11 @@ class Listen:
     def listen_vocal(self):
         r = sr.Recognizer()
         with sr.Microphone() as source:
-            self.st.speak('Hello Sir  I am Bheem man how can i help u')
+            self.st.speak('Hello Sir  I am Jarivs how can i help u')
             audio = r.listen(source)
             try:
                 text = r.recognize_google(audio, language='en-in')
-                if text.__contains__('Bheem') or text.__contains__('bheem'):
+                if text.__contains__('Jarvis') or text.__contains__('jarvis'):
                     current_time = datetime.now().hour
                     if current_time in range(1, 12):
                         self.st.speak('Hi Sir  Good Morning')
